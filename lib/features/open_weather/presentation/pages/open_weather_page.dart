@@ -20,6 +20,7 @@ class OpenWeatherPage extends StatelessWidget {
             image: DecorationImage(
                 colorFilter:
                     const ColorFilter.mode(Colors.grey, BlendMode.darken),
+                // display a different image depending on the time of the day
                 image: kAppBackgroundImage,
                 fit: BoxFit.cover)),
         child: BlocProvider(

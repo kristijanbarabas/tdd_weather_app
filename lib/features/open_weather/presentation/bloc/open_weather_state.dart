@@ -7,6 +7,8 @@ abstract class OpenWeatherState extends Equatable {
   List<Object> get props => [];
 }
 
+// the states that the bloc has - Empty is the initial state
+// we handle them in the page file to display proper widgets for each state
 class Empty extends OpenWeatherState {}
 
 class Loading extends OpenWeatherState {}

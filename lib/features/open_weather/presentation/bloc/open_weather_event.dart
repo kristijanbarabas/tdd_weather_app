@@ -7,6 +7,7 @@ abstract class OpenWeatherEvent extends Equatable {
   List<Object> get props => [];
 }
 
+// This is the event that we handle in the bloc 
 class GetOpenWeatherForCertainCity extends OpenWeatherEvent {
   final String? cityName;
 

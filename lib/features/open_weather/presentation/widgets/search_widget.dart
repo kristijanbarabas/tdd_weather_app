@@ -15,6 +15,7 @@ class SearchWidget extends StatefulWidget {
 
 class _SearchWidgetState extends State<SearchWidget> {
   final controller = TextEditingController();
+  // this string is for the  data/city that the user inputs
   late String inputString;
 
   @override
@@ -57,6 +58,7 @@ class _SearchWidgetState extends State<SearchWidget> {
   }
 
   void findCityWeather() {
+    // we notify the bloc of a new event
     BlocProvider.of<OpenWeatherBloc>(context)
         .add(GetOpenWeatherForCertainCity(inputString));
     // clear the controller

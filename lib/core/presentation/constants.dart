@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+// styling variables for widgets
+// depending on the time of the day styling is different
 final DateTime now = DateTime.now();
+// text styling
 final TextStyle kOpenWeatherDisplayTextStyle = now.hour < 17
     ? TextStyle(
         fontSize: 40,
@@ -31,15 +34,6 @@ final TextStyle kOpenWeatherDisplayTextStyle = now.hour < 17
     : const TextStyle(
         fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white);
 
-ImageProvider<Object> kAppBackgroundImage = now.hour < 17
-    ? const AssetImage(
-        'assets/images/city_day.jpg',
-      )
-    : const AssetImage('assets/images/city_night.jpg');
-
-// border color
-const BorderSide kBorderSide = BorderSide(width: 3, color: Colors.white);
-
 final TextStyle kMessageDisplayTextStyle = now.hour < 17
     ? TextStyle(
         fontSize: 30,
@@ -69,3 +63,12 @@ final TextStyle kMessageDisplayTextStyle = now.hour < 17
           ])
     : const TextStyle(
         fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white);
+// background images
+ImageProvider<Object> kAppBackgroundImage = now.hour < 17
+    ? const AssetImage(
+        'assets/images/city_day.jpg',
+      )
+    : const AssetImage('assets/images/city_night.jpg');
+
+// text field border color
+const BorderSide kBorderSide = BorderSide(width: 3, color: Colors.white);

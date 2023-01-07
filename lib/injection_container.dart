@@ -10,6 +10,7 @@ import 'package:weather_app_clean_architecture/features/open_weather/domain/usec
 import 'package:weather_app_clean_architecture/features/open_weather/presentation/bloc/open_weather_bloc.dart';
 import 'package:http/http.dart' as http;
 
+// dependency injection
 final sl = GetIt.instance;
 // we can register factory - they always instantiate a NEW instance of the class
 // singelton will always grant THE SAME instance, get_it will cash it

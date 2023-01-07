@@ -20,13 +20,14 @@ class OpenWeatherBloc extends Bloc<OpenWeatherEvent, OpenWeatherState> {
     required this.getOpenWeatherForCertainCity,
   }) : super(Empty()) {
     on<OpenWeatherEvent>((event, emit) async {
+      // the event that emits states
       if (event is GetOpenWeatherForCertainCity) {
         emit(Loading());
         final failureOrOpenWeather =
             await getOpenWeatherForCertainCity!(Params(city: event.cityName!));
         // check if the future is null to avoid late initialization and null check used on a null value
         if (failureOrOpenWeather != null) {
-          // we need to await the future
+          // we need to await the future and then emit the proper state
           emit(await _eitherLoadedOrErrorState(failureOrOpenWeather));
         }
       }
