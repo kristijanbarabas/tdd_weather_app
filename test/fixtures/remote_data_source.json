@@ -1,0 +1,12 @@
+{
+    "weather": [
+    {
+    "id": 802,
+    "main": "Clouds",
+    "description": "scattered clouds",
+    "icon": "03d"
+    }
+    ],
+    "name": "Karlovac",
+    "main": {"temp":30.00}
+}
